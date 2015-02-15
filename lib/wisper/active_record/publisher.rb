@@ -9,7 +9,7 @@ module Wisper
         after_validation :after_validation_broadcast
         after_commit     :after_create_broadcast,  on: :create
         after_commit     :after_update_broadcast,  on: :update
-        after_commit     :after_destroy_broadcast, on: :destroy
+        after_destroy     :after_destroy_broadcast, on: :destroy
         after_commit     :after_commit_broadcast
         after_rollback   :after_rollback_broadcast
       end
